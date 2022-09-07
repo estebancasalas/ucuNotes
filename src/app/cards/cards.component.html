@@ -1,0 +1,25 @@
+<div class="col-md-4" id="col-'+nuevaID+'">
+    <div class="card mt-3" id="'+nuevaID+'">
+        <div class="card-body" id="cBody'+nuevaID+'" data-bs-toggle="modal" data-bs-target="#modal-editar"
+            onclick="editarNota(this.id)">
+            <p class="card-text" id="cText'+nuevaID+'"> </p>
+        </div>
+         <div>
+            <label>Ciudad: {{note.city}} </label>
+        </div>
+        <div>
+            <label>Temperatura: {{note.temp}} °C</label>
+        </div>
+        <div>
+            <label>Fecha: {{note.date}}</label>
+        </div>
+        <div>
+            <label>Hora: {{note.time}}</label>
+        </div>
+        <div class="card-footer">
+            <div class="d-flex flex-row-reverse">
+                <img class="papelera" id="cFoot'+nuevaID+'" src="trash.png" data-bs-toggle="modal" data-bs-target="#modal-eliminar" onclick="eliminarNota(this.id)"> 
+            </div>
+        </div>
+    </div>
+</div>
