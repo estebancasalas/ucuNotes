@@ -8,6 +8,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppComponent {
 
+  edit = "modal-editar"
+
   constructor(private modalService: NgbModal) {
   }
 
