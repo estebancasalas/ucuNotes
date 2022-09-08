@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {Note} from './Note';
 import {NOTES} from './Mock-notes'
 
@@ -8,11 +8,10 @@ import {NOTES} from './Mock-notes'
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-//  notes: NOTES[] = [];
-  note: Note;
-  constructor() {
-    this.note = {'id':1, 'city':'Montevideo', 'temp':14, 'date':'07/09/2022', 'time':'12:00'};
-  }
+  @Input() note :Note = {'id':1, 'city':'Montevideo', 'temp':14, 'date':'07/09/2022', 'time':'12:00', 'text':'No Funciona'};
+  
+  constructor() { 
+   }
   
 
   ngOnInit(): void {
