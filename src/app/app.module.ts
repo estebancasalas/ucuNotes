@@ -12,6 +12,7 @@ import { AddButtonComponent } from './add-button/add-button.component';
 import { AddEditModalComponent } from './add-edit-modal/add-edit-modal.component';
 import { DeleteModalComponent } from './delete-modal/delete-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
