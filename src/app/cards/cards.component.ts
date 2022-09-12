@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {Note} from './Note';
-import {NOTES} from './Mock-notes'
+import { TemperatureService } from '../temperature.service';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-cards',
@@ -9,11 +10,23 @@ import {NOTES} from './Mock-notes'
 })
 export class CardsComponent implements OnInit {
   @Input() note? :Note;
-  constructor() { 
+  temperature? : String;
+  constructor(private tempService:TemperatureService) { 
    }
   
-
+  async getTemperature(): Promise<string>{
+    if (this.note)
+    {
+      this.temperature = await (this.tempService.getTemp(this.note?.time,this.note?.date,this.note?.city))
+      return "ok"
+    } 
+    else
+    {
+      return "error";
+    }
+  }
   ngOnInit(): void {
+    this.getTemperature();
   }
 
 }
