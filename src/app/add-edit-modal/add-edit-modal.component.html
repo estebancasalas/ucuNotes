@@ -10,9 +10,7 @@
             <div class="modal-body">
                 <div class="container d-flex justify-content-center" >
                     <div *ngIf="id === 'modal-agregar'; else textarea_editar"><textarea name="textoAgregar" id="textoAgregar" cols="30" rows="6" ></textarea></div>
-                     <ng-template #textarea_editar><textarea name="textoNota" id="textoNota" cols="30" rows="6" ></textarea></ng-template>
-
-                    
+                     <ng-template #textarea_editar><textarea name="textoNota" id="textoNota" cols="30" rows="6" ></textarea></ng-template>                    
                 </div>
                 <div class="container d-flex justify-content-center mt-3" >
                     <div class="container d-flex justify-content-center">
@@ -26,8 +24,8 @@
                     </div>
                 </div>
                 <div class="container selectCiudad m-3">
-                    <select  class="form-control d-flex" id="CiudadAgregar" name="Ciudad">
-                
+                    <select   class="form-control d-flex" id="CiudadAgregar" name="Ciudad">
+                        <option *ngFor="let city of ciudades" value="{{city}}">{{city}}</option>
                     </select>
                 </div>
             </div>
