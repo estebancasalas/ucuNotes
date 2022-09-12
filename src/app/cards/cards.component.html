@@ -1,8 +1,8 @@
-<div class="col-md-4" id="col-'+nuevaID+'">
+<div *ngIf="note" class="col-md-4" id="col-'+nuevaID+'">
     <div class="card mt-3" id="'+nuevaID+'">
         <div class="card-body" id="cBody'+nuevaID+'" data-bs-toggle="modal" data-bs-target="#modal-editar"
             onclick="editarNota(this.id)">
-            <p class="card-text" id="cText'+nuevaID+'"> </p>
+            <p class="card-text" id="cText'+nuevaID+'">{{note.text}}</p>
         </div>
          <div>
             <label>Ciudad: {{note.city}} </label>
