@@ -8,8 +8,8 @@ import { Note } from './cards/Note';
 export class InMemoryDataService implements InMemoryDbService {
   createDb(){
     let cards = [
-      {id: 1, city: "Montevideo", hour: "12", date: "2021-03-01"},
-      {id: 2, city: "Lima", hour: "12", date: "2021-03-01"},
+      {'id':1, 'city':'Berlin', 'date':'2022-09-13', 'time':'12:00', 'text':'Generado Automaticamente'},
+      {'id':2, 'city':'Montevideo', 'date':'2022-09-13', 'time':'14:00', 'text':'Generado Automaticamente'}
     ];
     return {cards};
   }
