@@ -18,5 +18,5 @@ export class InMemoryDataService implements InMemoryDbService {
     return cards.length > 0 ? Math.max(...cards.map(Note => Note.id)) + 1 : 0;
   }
 
-  constructor() { }
+  constructor() { } 
 }
