@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TemperatureService } from '../temperature.service';
 import { cities } from '../mockCities'
+import { NOTES } from '../cards/Mock-notes';
 
 
 @Component({
@@ -16,6 +17,18 @@ export class AddEditModalComponent implements OnInit {
   constructor() {
     
   }
+
+  /* editarNota_aux(){ 
+    let text = 
+}
+
+  editarNota(id){
+    populateDropdown('CiudadEditar');
+    let idTexto = "cText" + id[id.length - 1]
+    recuperarTexto(idTexto);
+    idActual = idTexto;
+    return
+} */
 
   ngOnInit(): void {
   }
