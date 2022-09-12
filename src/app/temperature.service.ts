@@ -18,9 +18,10 @@ export class TemperatureService {
     return json.hourly.temperature_2m[hour];
   }
 
+  
   async getTemp(hour: string, date: string, city: string){
     if(!(city in cities)){
-        return "The specified city is not valid. Try again.";
+        return "The specified city is not valid. Try again."; //TODO: throw correct HTTP error
     }
     else{
         let realHour: number = parseInt(hour);
