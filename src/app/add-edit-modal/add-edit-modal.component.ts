@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TemperatureService } from '../temperature.service';
+import { cities } from '../mockCities'
+
 
 @Component({
   selector: 'app-add-edit-modal',
@@ -7,12 +10,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AddEditModalComponent implements OnInit {
 
-  //@Input() id : string;
+  @Input() id : string = "modal-agregar";
+  ciudades : Array<string> = Object.keys(cities)
 
-  constructor() { 
+  constructor() {
+    
   }
 
   ngOnInit(): void {
   }
+
+  
+ 
 
 }
