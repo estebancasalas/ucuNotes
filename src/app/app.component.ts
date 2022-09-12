@@ -10,6 +10,8 @@ import { NOTES } from './cards/Mock-notes'
 })
 export class AppComponent {
 
+  edit = "modal-editar"
+
   constructor(private modalService: NgbModal) {
   }
 
