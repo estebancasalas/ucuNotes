@@ -1,7 +1,11 @@
 <app-sup-nav-bar></app-sup-nav-bar>
-<li *ngFor="let notes of noteParent" class="listaInicial">
-    <app-cards [note] = "notes"></app-cards>
-</li>
+<div class="container mt-3 mb-5 page-size">
+    <div class="row">
+        <div *ngFor="let notes of noteParent" class="col-sm-4">
+            <app-cards [note]="notes"></app-cards>
+        </div>
+    </div>
+</div>
 
 <app-add-button></app-add-button>
 <app-add-edit-modal></app-add-edit-modal>
