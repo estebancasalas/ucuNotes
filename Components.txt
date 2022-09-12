@@ -1,0 +1,13 @@
+Componentes:
+
+-body component -> app component
+	-navBar superior
+	-cartas
+		-boton eliminar
+	-navBar inferior
+	-boton agregar
+	-boton MN
+	-modal agregar - modal editar
+	-modal eliminar
+
+a mi componente le quiero inyectar los datos que quiero ahi adentro
