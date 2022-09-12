@@ -1,5 +1,8 @@
 <app-sup-nav-bar></app-sup-nav-bar>
-<app-cards></app-cards>
+<li *ngFor="let notes of noteParent" class="listaInicial">
+    <app-cards [note] = "notes"></app-cards>
+</li>
+
 <app-add-button></app-add-button>
 <app-add-edit-modal></app-add-edit-modal>
 <app-add-edit-modal [id]="edit"></app-add-edit-modal>
