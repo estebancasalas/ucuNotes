@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Note} from './cards/Note';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NOTES } from './cards/Mock-notes'
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   public open(modal: any): void {
     this.modalService.open(modal);
   }
-  noteParent : Note[] = [{'id':1, 'city':'Montevideo', 'temp':14, 'date':'07/09/2022', 'time':'12:00', 'text':'Generado Automaticamente'},{'id':2, 'city':'Montevideo', 'temp':17, 'date':'07/09/2022', 'time':'14:00', 'text':'Generado Automaticamente'}];
+  noteParent : Note[] = NOTES;
   title='ucuNotes';
 
 
