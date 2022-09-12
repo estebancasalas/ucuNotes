@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { cities} from './mockCities';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -29,7 +30,8 @@ export class TemperatureService {
         let lon: number = cities[city][1];
         const JSON = await this.getJSONFromFetch(lat,lon,date);
         const temp: number = this.getHourFromJSON(realHour ,JSON);
-        return temp;
+        console.log(temp);
+        return temp.toString();
     }
   }
 }

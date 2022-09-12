@@ -7,8 +7,8 @@
          <div>
             <label>Ciudad: {{note.city}} </label>
         </div>
-        <div>
-            <label>Temperatura: {{note.temp}} °C</label>
+        <div *ngIf="temperature">
+            <label>Temperatura: {{temperature}} °C</label>
         </div>
         <div>
             <label>Fecha: {{note.date}}</label>
