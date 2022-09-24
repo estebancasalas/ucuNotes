@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { CardContainerComponent } from './card-container/card-container.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     DeleteButtonComponent,
     AddButtonComponent,
     AddEditModalComponent,
-    DeleteModalComponent
+    DeleteModalComponent,
+    CardContainerComponent
   ],
   imports: [
     BrowserModule,

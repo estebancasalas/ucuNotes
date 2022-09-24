@@ -1,14 +1,7 @@
 <app-sup-nav-bar></app-sup-nav-bar>
-<div class="container mt-3 mb-5 page-size">
-    <div class="row">
-        <div *ngFor="let notes of noteParent" class="col-sm-4">
-            <app-cards [note]="notes"></app-cards>
-        </div>
-    </div>
-</div>
-
-<app-add-button></app-add-button>
+<app-card-container></app-card-container>
 <app-add-edit-modal></app-add-edit-modal>
 <app-add-edit-modal [id]="edit"></app-add-edit-modal>
 <app-night-mode-switch></app-night-mode-switch>
+<app-add-button></app-add-button>
 <app-inf-nav-bar></app-inf-nav-bar>
