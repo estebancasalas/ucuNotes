@@ -1,7 +1,7 @@
 <div *ngIf="note" id="col-'+nuevaID+'">
     <div class="card mt-3" id="'+nuevaID+'">
         <div class="card-body" id="cBody'+nuevaID+'" data-bs-toggle="modal" data-bs-target="#modal-editar"
-            onclick="editarNota(this.id)">
+            (click)="editarNota(this.note.id)">
             <p class="card-text" id="cText'+nuevaID+'">{{note.text}}</p>
         </div>
          <div>

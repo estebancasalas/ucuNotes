@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Note } from '../cards/Note';
-import { NOTES } from '../cards/Mock-notes';
+import { NotesService } from '../notes.service';
 @Component({
   selector: 'app-card-container',
   templateUrl: './card-container.component.html',
@@ -8,11 +8,15 @@ import { NOTES } from '../cards/Mock-notes';
 })
 export class CardContainerComponent implements OnInit {
 
-  noteParent : Note[] = NOTES;
+  noteParent? : Note[];
 
-  constructor() { }
+  constructor(private noteService:NotesService) { }
 
   ngOnInit(): void {
+    this.noteService.getNotes().subscribe(notes => this.noteParent = notes);
   }
 
+  onChanged(event: Note) {
+    this.noteService.getNotes().subscribe(notes => this.noteParent = notes);
+  }
 }

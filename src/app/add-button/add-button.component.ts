@@ -11,5 +11,4 @@ export class AddButtonComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
